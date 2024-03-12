@@ -22,11 +22,15 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                         return response.json();
                     })
                     .then(function (pokemonData) {
-                        /* ------------------------- RETORNO TIPO ------------------------------ */
+
+/* ------------------------- RETORNO TIPO ------------------------------ */
+
                         console.log(pokemonData);//subistituir pelo retorno em tela da nova div
                         typeResult.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
                         //retornar a imagem do pokémon
-                        /* ---------------------------- RETORNO IMAGEM--------------------------------- */
+
+/* ---------------------------- RETORNO IMAGEM--------------------------------- */
+
                         const imageUrl = pokemonData.sprites.front_default;
                         const divImagem = document.getElementById('imagem');
 
@@ -53,13 +57,34 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         console.log("Houve um erro: " + error);
     });
 
+/* ------------------------------ Teste Select ------------------------------ */
 
+fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        const pokemons = data.results;
+        const select = document.getElementById("testeSelect")
+        
 
+        pokemons.forEach((pokemon) => {
+            const option = document.createElement("option");
+            option.value = pokemon.url.split("/")[6]; // Extrai o ID do pokemon da URL
+            option.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+            select.appendChild(option);
+            
+        })
+    })
+    .catch(function (error) {
+        console.error("Erro:", error); // Use console.error para erros
+    });
 /* ----------------------------- Próximos Passos ---------------------------- */
 
 // OK - Colocar o retorno do número digitado para aparecer na div embaixo da foto
 // OK - Foto quando for retornar o número
-// - Colocar select com os pokemons
+// OK - Colocar select com os pokemons
+// - Mover select para dentro do outro escopo para usar a mesma solicitação de api
 // - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
 // - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
 // - Colocar contra o que é fraco ou forte
