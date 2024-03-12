@@ -82,7 +82,7 @@ body {
     /*Typography stuff*/
     text-align: center;
     background-color: white;
-    border-radius: var(--radius-2);
+    border-radius: var(--radius-1);
 
 }
 
@@ -150,4 +150,9 @@ body {
     border: 2px solid;
     /*Typography stuff*/
     text-align: center;
+}
+
+#testeSelect{
+    grid-column: 2;
+    grid-row: 5;
 }
