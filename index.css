@@ -34,7 +34,8 @@ body {
     border: 2px solid;
     background-color: white;
     border-radius: var(--radius-2);
-    
+    align-self: center;
+    justify-self: center;
 }
 
 #imagem img {
@@ -42,20 +43,29 @@ body {
     /* Define a largura da imagem para preencher a div */
     height: 100%;
     /* Define a altura da imagem para preencher a div */
-
 }
 
+#select{
+/*Display stuff*/
+    grid-column: 2;
+    grid-row: 4;
+/*Box model stuff*/
+    width: 170px;
+    height: 20px;
+/*Typography stuff*/
+    text-align: center;
+}
 #inputNumber {
     /*Display stuff*/
     grid-column: 2;
     grid-row: 4;
-    align-self: flex-start;
+    align-self: flex-end;
     justify-self: center;
     /*Box model stuff*/
     width: 60px;
     height: 20px;
     text-align: center;
-
+    
 }
 
 #inputName {
@@ -92,6 +102,7 @@ body {
     grid-row: 5;
     /*Box model stuff*/
     height: 25px;
+    align-self: center;
 }
 
 #rightSection {
@@ -150,9 +161,4 @@ body {
     border: 2px solid;
     /*Typography stuff*/
     text-align: center;
-}
-
-#testeSelect{
-    grid-column: 2;
-    grid-row: 5;
 }
