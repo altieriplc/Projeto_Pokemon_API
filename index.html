@@ -10,23 +10,34 @@
 </head>
 
 <body>
+    <header id="header">
+
+        <button id="showMessage">Instruções</button>
+
+        <dialog id="modalContainer">
+            <h1 id="textoModal">Selecione um Pokémon na lista, ou digite seu número e clique em pesquisar!</h1>
+
+            <button id="closeModal">Fechar</button>
+        </dialog>
+    </header>
+
     <section id="centralSection">
-
-        <div id="imagem">
-
+        <div>
+            <img src="https://imgur.com/a/V9SDtZ3" alt="pokebola" style="border: 2px solid;">
         </div>
-        <!-- <label for="nameInput"></label>
-            <input type="text" id="inputName" name="nameInput" class="inputs"> -->
-            
-            <label for="numbInput"></label>
-            <input type="number" id="inputNumber" name="numbInput" class="inputs">
-            
-            <div id="name"></div>
-            <select name="" id="select">
-                <Option>Selecione um Pokémon</Option>
-            </select>
-            
-        <button id="enviar">Send</button>
+
+        <div id="imagem"></div>
+
+
+        <label for="numbInput"></label>
+        <input type="number" id="inputNumber" name="numbInput" class="inputs">
+
+        <div id="name"></div>
+        <select name="" id="select">
+            <Option>Selecione um Pokémon</Option>
+        </select>
+
+        <button id="enviar">Pesquisar</button>
     </section>
     <section id="rightSection">
 
@@ -35,6 +46,7 @@
         <div id="type">Tipo</div>
 
         <div id="typeResult"></div>
+
 
 
     </section>

@@ -118,6 +118,30 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         console.error("Erro:", error); // Use console.error para erros
     });
 
+
+/* ------------------------------- Botão Modal ------------------------------ */
+function handleModal(){
+    const button = document.querySelector('#showMessage')
+    const modalContainer = document.querySelector('#modalContainer')
+
+    button.addEventListener('click',()=> {
+        modalContainer.showModal()
+    })
+    closeModal()
+}
+
+function closeModal(){
+    const button = document.querySelector('#closeModal')
+    const modalContainer = document.querySelector('#modalContainer')
+    
+    button.addEventListener('click', () => {
+        modalContainer.close()
+    })
+}
+
+handleModal()
+
+
 /* ----------------------------- Próximos Passos ---------------------------- */
 
 // OK - Colocar o retorno do número digitado para aparecer na div embaixo da foto
