@@ -11,7 +11,7 @@
         height: 100vh;
         background-image: url("Banco Imagens/SI_Pokemon_image1280w.png");
         background-size: 100%;
-        background-repeat:no-repeat ;
+        background-repeat: no-repeat;
         background-position: center center;
         opacity: 0.9;
     }
@@ -58,12 +58,31 @@
     }
 
     #pokeballImg {
+        position: relative;
+        animation: rolar 5s infinite;
         grid-column: 1;
         grid-row: 1;
         width: 50px;
         height: 50px;
-
     }
+
+    @keyframes rolar {
+        0% {
+            left: 0;
+            transform: rotate(0);
+        }
+
+        50% {
+            left: 49.5vh;
+            transform: rotate(720deg);
+        }
+
+        100% {
+            left: 0;
+            transform: rotate(0);
+        }
+    }
+
 
     #imagem {
         /*Display stuff*/
@@ -78,6 +97,20 @@
         align-self: center;
         justify-self: center;
     }
+
+    /* @keyframes encoImagePoke{
+        0% {
+            transform: scale(1);
+        }
+        
+        50% {
+            transform: scale(0);
+        }
+        
+        100% {
+            transform: scale(1);
+        }
+    } */
 
     #imagem img {
         width: 100%;
@@ -107,8 +140,19 @@
         width: 60px;
         height: 20px;
         text-align: center;
-
     }
+
+    /* #inputNumber.valid {
+        border-color: green;
+        transition: all 0.3s ease-in-out;
+        color: aquamarine;
+    }
+
+    #inputNumber.invalid {
+        border-color: red;
+        background-color: #520f0f;
+        transition: all 0.3s ease-in-out;
+    } */
 
     #inputName {
         /*Display stuff*/
@@ -145,6 +189,13 @@
         /*Box model stuff*/
         height: 25px;
         align-self: center;
+        border-radius: var(--radius-2);
+    }
+
+    #enviar:hover {
+        background-color: #dbdd7f;
+        color: #000000;
+        transition: all 0.2s ease-in-out;
     }
 
     #rightSection {
@@ -213,3 +264,18 @@
     }
 }
 
+
+
+/* ----------------------------- Próximos Passos ---------------------------- */
+
+/* Criar a low section com menus responsivos, com links para algo de pokemon */
+/* Alterar largura para porcentagens  
+        ->Tamanho pode ser definido em px no html e depois alterado em REM no media Querry */
+/* Arrumar giro pokebolla */
+/* Entender a construção do menu responsivo */
+/* Arrumar tamanho imagem de fundo */
+/* Travar posição meu responsivo quando clicado */
+
+/* -------------------------------- Anotações ------------------------------- */
+
+/* Input .valid/.invalid não está funcionando */

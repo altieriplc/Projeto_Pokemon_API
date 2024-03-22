@@ -138,6 +138,7 @@
         height: 25px;
         align-self: center;
     }
+
     /* ------------------------------ RIGHT SECTION ----------------------------- */
     #rightSection {
         /*Display stuff*/
@@ -202,5 +203,17 @@
         /*Typography stuff*/
         text-align: center;
         background-color: white;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .show {
+        display: block;
     }
 }

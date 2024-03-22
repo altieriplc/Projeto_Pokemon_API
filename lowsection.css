@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Solid';
+    src: url('Pokemon\ Solid.ttf') format('truetype');
+}
+
+
+#lowSection {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+    margin-top: 30px;
+
+}
+.menu {
+    display: none;
+    
+    
+}
+
+.menu-button {
+    display: block;
+    border-radius: var(--radius-1);
+    font-family: 'Solid', sans-serif;
+    color: black;
+    font-size: 1rem;    
+}
+
+.show {
+    display: block;
+}
+
+.menu {
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.menu.show {
+    animation: slide-down 0.3s ease-in-out forwards;
+    
+}
+
+@keyframes slide-down {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}

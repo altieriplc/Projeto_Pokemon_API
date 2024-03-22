@@ -10,7 +10,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 
         enviar.addEventListener("click", function () {
 
-            
+
 
             const input = document.getElementById("inputNumber").value
             const pokemonIndex = parseInt(input) - 1; // Ajusta o índice do array para começar em 0
@@ -78,7 +78,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
             select.appendChild(option);
 
         })
-        
+
         select.addEventListener("change", function () {
             const pokemonId = select.value;
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
@@ -104,14 +104,14 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                     typeResult.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
 
                     inputNumber.value = pokemonId
-                    
-                    
+
+
 
                 })
                 .catch(function (error) {
                     console.error("Erro:", error);
                 })
-                
+
         })
     })
     .catch(function (error) {
@@ -120,20 +120,21 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 
 
 /* ------------------------------- Botão Modal ------------------------------ */
-function handleModal(){
+
+function handleModal() {
     const button = document.querySelector('#showMessage')
     const modalContainer = document.querySelector('#modalContainer')
 
-    button.addEventListener('click',()=> {
+    button.addEventListener('click', () => {
         modalContainer.showModal()
     })
     closeModal()
 }
 
-function closeModal(){
+function closeModal() {
     const button = document.querySelector('#closeModal')
     const modalContainer = document.querySelector('#modalContainer')
-    
+
     button.addEventListener('click', () => {
         modalContainer.close()
     })
@@ -141,14 +142,23 @@ function closeModal(){
 
 handleModal()
 
+/* ----------------------------- Menu Responsivo ---------------------------- */
+
+const menuButton = document.querySelector('.menu-button');
+const menu = document.querySelector('.menu');
+
+menuButton.addEventListener('click', function () {
+    menu.classList.toggle('show');//toggle = se elemento existir é removido, se não existir é adicionado
+});
 
 /* ----------------------------- Próximos Passos ---------------------------- */
+
 
 // OK - Colocar o retorno do número digitado para aparecer na div embaixo da foto
 // OK - Foto quando for retornar o número
 // OK - Colocar select com os pokemons
 // - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
 //     ->select já estpa retornado numero, mas numero ainda não retorna o select
-
 // - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
 // - Colocar contra o que é fraco ou forte
+// - Um arquivo script para cada pedaço do código, uma para header, um para main, etc...
