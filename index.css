@@ -264,7 +264,21 @@
     }
 }
 
+.moreAboutPoke{
+    color: rgb(0, 0, 0);
+    word-wrap: break-word
+}
+.moreAboutPoke:link {
+    color: blue; /* Cor do link não visitado */
+}
 
+.moreAboutPoke:visited {
+    color:black /* Cor do link visitado */
+}
+
+.moreAboutPoke:hover {
+    color: white; /* Cor do link quando o mouse está sobre ele */
+}
 
 /* ----------------------------- Próximos Passos ---------------------------- */
 
@@ -275,6 +289,7 @@
 /* Entender a construção do menu responsivo */
 /* Arrumar tamanho imagem de fundo */
 /* Travar posição meu responsivo quando clicado */
+/* Usar bibliotecas */
 
 /* -------------------------------- Anotações ------------------------------- */
 
