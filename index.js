@@ -5,10 +5,10 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
     .then(function (data) {
         const pokemons = data.results;
 
-        const enviar = document.getElementById("enviar")
-        const divName = document.getElementById("name")
+        const enviar = document.getElementById("enviar") // botão de pesquisa depois de escolhor um númeto
+        const divName = document.getElementById("name") //campo que recebe o nome do pokemon quando pesquisado por número
 
-        enviar.addEventListener("click", function () {
+        enviar.addEventListener("click", function () { // click pesquisar
 
 
 
@@ -130,6 +130,8 @@ function handleModal() {
     })
     closeModal()
 }
+
+/* ------------------------------------ . ----------------------------------- */
 
 function closeModal() {
     const button = document.querySelector('#closeModal')

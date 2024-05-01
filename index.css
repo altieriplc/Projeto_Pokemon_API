@@ -10,10 +10,14 @@
         /*Box model stuff*/
         height: 100vh;
         background-image: url("Banco Imagens/SI_Pokemon_image1280w.png");
-        background-size: 100%;
+        background-size: 100% 100%;
+        background-position: center;
         background-repeat: no-repeat;
-        background-position: center center;
         opacity: 0.9;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
     }
 
     #header {
@@ -193,7 +197,7 @@
     }
 
     #enviar:hover {
-        background-color: #dbdd7f;
+        background-color: #b2b2aa;
         color: #000000;
         transition: all 0.2s ease-in-out;
     }
@@ -282,7 +286,6 @@
 
 /* ----------------------------- Próximos Passos ---------------------------- */
 
-/* Criar a low section com menus responsivos, com links para algo de pokemon */
 /* Alterar largura para porcentagens  
         ->Tamanho pode ser definido em px no html e depois alterado em REM no media Querry */
 /* Arrumar giro pokebolla */
