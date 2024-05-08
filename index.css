@@ -63,11 +63,20 @@
 
     #pokeballImg {
         position: relative;
-        animation: rolar 5s infinite;
+        animation: rolar 10s infinite;
         grid-column: 1;
         grid-row: 1;
         width: 50px;
         height: 50px;
+    }
+    #pokeballImg2 {
+        position: relative;
+        animation: rolar 10s infinite;
+        grid-column: 3;
+        grid-row: 1;
+        width: 50px;
+        height: 50px;
+        justify-self: flex-end;
     }
 
     @keyframes rolar {
@@ -77,7 +86,7 @@
         }
 
         50% {
-            left: 49.5vh;
+            left: 0vh;
             transform: rotate(720deg);
         }
 
@@ -288,9 +297,7 @@
 
 /* Alterar largura para porcentagens  
         ->Tamanho pode ser definido em px no html e depois alterado em REM no media Querry */
-/* Arrumar giro pokebolla */
 /* Entender a construção do menu responsivo */
-/* Arrumar tamanho imagem de fundo */
 /* Travar posição meu responsivo quando clicado */
 /* Usar bibliotecas */
 
