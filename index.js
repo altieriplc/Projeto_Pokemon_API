@@ -3,7 +3,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         return response.json();
     })
     .then(function (data) {
-        const pokemons = data.results;
+        const pokemons = data.results;//define a const pokemon como "recebedora" do resultado da api
 
         const enviar = document.getElementById("enviar") // botão de pesquisa depois de escolhor um númeto
         const divName = document.getElementById("name") //campo que recebe o nome do pokemon quando pesquisado por número
@@ -12,7 +12,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 
 
 
-            const input = document.getElementById("inputNumber").value
+            const input = document.getElementById("inputNumber").value //input de digitação do número do pekemon
             const pokemonIndex = parseInt(input) - 1; // Ajusta o índice do array para começar em 0
             if (pokemonIndex >= 0 && pokemonIndex < pokemons.length) {
                 const pokemonNome = pokemons[pokemonIndex].name
@@ -42,6 +42,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                         img.src = imageUrl//coloca o resultado da requisição como src na div imagem
                         divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
                     })
+                    select.value = input;
 
 
 
@@ -130,8 +131,6 @@ function handleModal() {
     })
     closeModal()
 }
-
-/* ------------------------------------ . ----------------------------------- */
 
 function closeModal() {
     const button = document.querySelector('#closeModal')
