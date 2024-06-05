@@ -158,8 +158,8 @@ menuButton.addEventListener('click', function () {
 // OK - Colocar o retorno do número digitado para aparecer na div embaixo da foto
 // OK - Foto quando for retornar o número
 // OK - Colocar select com os pokemons
-// - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
-//     ->select já está retornado numero, mas numero ainda não retorna o select
+// OK - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
+// - Remover retorno de nome na div superior ao select
 // - Fazer o retorno da liga no campo liga
 // - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
 // - Colocar contra o que é fraco ou forte
