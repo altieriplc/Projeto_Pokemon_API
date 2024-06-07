@@ -6,7 +6,9 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         const pokemons = data.results;//define a const pokemon como "recebedora" do resultado da api
 
         const enviar = document.getElementById("enviar") // botão de pesquisa depois de escolhor um númeto
-        const divName = document.getElementById("name") //campo que recebe o nome do pokemon quando pesquisado por número
+        
+
+/* ---------------------------- Clique Pesquisar ---------------------------- */
 
         enviar.addEventListener("click", function () { // click pesquisar
 
@@ -16,7 +18,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
             const pokemonIndex = parseInt(input) - 1; // Ajusta o índice do array para começar em 0
             if (pokemonIndex >= 0 && pokemonIndex < pokemons.length) {
                 const pokemonNome = pokemons[pokemonIndex].name
-                divName.innerText = pokemonNome.toUpperCase().slice();
+                
 
 
                 fetch(`https://pokeapi.co/api/v2/pokemon/${input}/`)//verificar se os dados que quero estão aqui mesmo, ou busco outros dados
@@ -75,7 +77,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
             const option = document.createElement("option");
             //Entender esse 6 abaixo e o split
             option.value = pokemon.url.split("/")[6]; // Extrai o ID do pokemon da URL
-            option.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+            option.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toUpperCase();
             select.appendChild(option);
 
         })
@@ -159,7 +161,8 @@ menuButton.addEventListener('click', function () {
 // OK - Foto quando for retornar o número
 // OK - Colocar select com os pokemons
 // OK - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
-// - Remover retorno de nome na div superior ao select
+// OK - Remover retorno de nome na div superior ao select
+// - Solucionar tamanho do texto no select
 // - Fazer o retorno da liga no campo liga
 // - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
 // - Colocar contra o que é fraco ou forte
