@@ -10,8 +10,8 @@
         /*Box model stuff*/
         height: 100vh;
         background-image: url("../Banco Imagens/SI_Pokemon_image1280w.png");
-        background-size: 100% 100%;
-        background-position: center;
+        background-size: cover;
+        background-position: contain;
         background-repeat: no-repeat;
         opacity: 0.9;
         height: 100vh;

@@ -1,3 +1,4 @@
+@media screen and (min-width: 200px) and (max-width: 740px) {
 @font-face {
     font-family: 'Solid';
     src: url('../Fonts/Pokemon\ Solid.ttf') format('truetype');
@@ -5,7 +6,7 @@
 
 
 #lowSection {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
     justify-self: center;
     margin-top: 30px;
@@ -47,4 +48,5 @@
     to {
         transform: scaleY(1);
     }
+}
 }

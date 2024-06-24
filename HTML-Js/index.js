@@ -167,3 +167,6 @@ menuButton.addEventListener('click', function () {
 // - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
 // - Colocar contra o que é fraco ou forte
 // - Um arquivo script para cada pedaço do código, uma para header, um para main, etc...
+
+// - CSS
+// - Arrumar giro das bolinha no tamanho de tela pequena
