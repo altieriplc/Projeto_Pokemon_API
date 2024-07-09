@@ -154,19 +154,3 @@ menuButton.addEventListener('click', function () {
     menu.classList.toggle('show');//toggle = se elemento existir é removido, se não existir é adicionado
 });
 
-/* ----------------------------- Próximos Passos ---------------------------- */
-
-
-// OK - Colocar o retorno do número digitado para aparecer na div embaixo da foto
-// OK - Foto quando for retornar o número
-// OK - Colocar select com os pokemons
-// OK - Linkar select e número para um retornar o outro e ai retornar os dados na section da direita
-// OK - Remover retorno de nome na div superior ao select
-// - Solucionar tamanho do texto no select
-// - Fazer o retorno da liga no campo liga
-// - Fazer outra solicitação para captura dos poderes, tipo ou outra informação?
-// - Colocar contra o que é fraco ou forte
-// - Um arquivo script para cada pedaço do código, uma para header, um para main, etc...
-
-// - CSS
-// - Arrumar giro das bolinha no tamanho de tela pequena
