@@ -9,7 +9,7 @@
         justify-content: center;
         /*Box model stuff*/
         height: 100vh;
-        background-image: url("../Banco Imagens/SI_Pokemon_image1280w.png");
+        background-image: url("../Img/SI_Pokemon_image1280w.png");
         background-size: cover;
         background-position: contain;
         background-repeat: no-repeat;
@@ -307,20 +307,22 @@
         text-align: center;
         background-color: white;
     }
-}
+    
+    .moreAboutPoke{
+        color: rgb(255, 255, 255);
+        border: solid 2px;
+        
+    }
+    .moreAboutPoke:link {
+        color: blue; /* Cor do link não visitado */
+    }
+    
+    .moreAboutPoke:visited {
+        color:rgb(0, 0, 0) /* Cor do link visitado */
+    }
+    
+    .moreAboutPoke:hover {
+        color: white; /* Cor do link quando o mouse está sobre ele */
+    }
 
-.moreAboutPoke{
-    color: rgb(0, 0, 0);
-    word-wrap: break-word
-}
-.moreAboutPoke:link {
-    color: blue; /* Cor do link não visitado */
-}
-
-.moreAboutPoke:visited {
-    color:black /* Cor do link visitado */
-}
-
-.moreAboutPoke:hover {
-    color: white; /* Cor do link quando o mouse está sobre ele */
 }
