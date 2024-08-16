@@ -276,6 +276,54 @@
         background-color: white;
     }
 
+    #resultType {
+        /*Display stuff*/
+        grid-column: 2;
+        grid-row: 2;
+        align-self: center;
+        justify-self: left;
+        /*Box model stuff*/
+        width: 120px;
+        height: 20px;
+        margin-left: 30px;
+        border: 2px solid;
+        /*Typography stuff*/
+        text-align: center;
+        background-color: white;
+    }
+
+    #habitat {
+        /*Display stuff*/
+        grid-column: 1;
+        grid-row: 3;
+        align-self: center;
+        justify-self: center;
+        /*Box model stuff*/
+        width: 120px;
+        height: 20px;
+        margin-left: 30px;
+        border: 2px solid;
+        /*Typography stuff*/
+        text-align: center;
+        background-color: white;
+    }
+
+    #resultHabitat {
+        /*Display stuff*/
+        grid-column: 2;
+        grid-row: 3;
+        align-self: center;
+        justify-self: center;
+        /*Box model stuff*/
+        width: 120px;
+        height: 20px;
+        margin-left: 30px;
+        border: 2px solid;
+        /*Typography stuff*/
+        text-align: center;
+        background-color: white;
+    }
+
     #league {
         /*Display stuff*/
         grid-column: 1;
@@ -292,12 +340,12 @@
         background-color: white;
     }
 
-    #typeResult {
+    #resultLeague {
         /*Display stuff*/
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 1;
         align-self: center;
-        justify-self: left;
+        justify-self: center;
         /*Box model stuff*/
         width: 120px;
         height: 20px;
@@ -307,7 +355,7 @@
         text-align: center;
         background-color: white;
     }
-    
+
     .moreAboutPoke{
         color: rgb(255, 255, 255);
         border: solid 2px;

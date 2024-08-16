@@ -30,7 +30,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                         /* ------------------------- RETORNO TIPO ------------------------------ */
 
                         console.log(pokemonData);//subistituir pelo retorno em tela da nova div
-                        typeResult.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
+                        resultType.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
                         //retornar a imagem do pokémon
 
                         /* ---------------------------- RETORNO IMAGEM--------------------------------- */
@@ -104,7 +104,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                     const img = document.createElement('img');
                     img.src = imageUrl//coloca o resultado da requisição como src na div imagem
                     divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
-                    typeResult.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
+                    resultType.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
 
                     inputNumber.value = pokemonId
 
