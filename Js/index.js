@@ -6,26 +6,24 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         const pokemons = data.results;//define a const pokemon como "recebedora" do resultado da api
 
         const enviar = document.getElementById("enviar") // botão de pesquisa depois de escolhor um númeto
-        
 
-/* ---------------------------- Clique Pesquisar ---------------------------- */
+
+        /* ---------------------------- Clique Pesquisar ---------------------------- */
 
         enviar.addEventListener("click", function () { // click pesquisar
-
-
 
             const input = document.getElementById("inputNumber").value //input de digitação do número do pekemon
             const pokemonIndex = parseInt(input) - 1; // Ajusta o índice do array para começar em 0
             if (pokemonIndex >= 0 && pokemonIndex < pokemons.length) {
-                const pokemonNome = pokemons[pokemonIndex].name
-                
+                const pokemonNome = pokemons[pokemonIndex].name //pega o nome do pokémon da api
+
 
 
                 fetch(`https://pokeapi.co/api/v2/pokemon/${input}/`)//verificar se os dados que quero estão aqui mesmo, ou busco outros dados
                     .then(function (response) {
                         return response.json();
                     })
-                    .then(function (pokemonData) {
+                    .then(function (pokemonData) { //pokemonData é o resultado da requisição
 
                         /* ------------------------- RETORNO TIPO ------------------------------ */
 
@@ -35,16 +33,16 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 
                         /* ---------------------------- RETORNO IMAGEM--------------------------------- */
 
-                        const imageUrl = pokemonData.sprites.front_default;
-                        const divImagem = document.getElementById('imagem');
+                        const imageUrl = pokemonData.sprites.front_default; //pega a url da imagem do pokémon
+                        const divImagem = document.getElementById('imagem'); //pega a div da imagem no html
 
-                        divImagem.innerHTML = ''//limpa a div no html ante da proxima execução, quando executo o código de novo clicando, ele começa a leitura, lê tudo em cima, quando chega aqui limpa a div da imagem e retorna a nova
+                        divImagem.innerHTML = ''//limpa a div no html antes da proxima execução, quando executo o código de novo clicando, ele começa a leitura, lê tudo em cima, quando chega aqui limpa a div da imagem e retorna a nova
 
                         const img = document.createElement('img');
                         img.src = imageUrl//coloca o resultado da requisição como src na div imagem
                         divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
                     })
-                    select.value = input;
+                select.value = input;
 
 
 
@@ -106,6 +104,10 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                     divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
                     resultType.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
 
+                    // #resultHabitat.innerText = pokemonData.location[0].location.name.charAt(0).toUpperCase() + pokemonData.location[0].location.name.slice(1)
+
+                    //API EM LOCATION REGIONS
+
                     inputNumber.value = pokemonId
 
 
@@ -153,4 +155,3 @@ const menu = document.querySelector('.menu');
 menuButton.addEventListener('click', function () {
     menu.classList.toggle('show');//toggle = se elemento existir é removido, se não existir é adicionado
 });
-

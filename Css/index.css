@@ -1,5 +1,10 @@
 @media screen and (min-width: 741px) and (max-width: 1500px) {
-
+    
+    @font-face {
+        font-family: 'Pokémon';
+        src: url('../Fonts/Pokemon Hollow.ttf') format('truetype');
+    }
+    
     body {
         /*Display stuff*/
         display: grid;
@@ -9,7 +14,7 @@
         justify-content: center;
         /*Box model stuff*/
         height: 100vh;
-        background-image: url("../Img/SI_Pokemon_image1280w.png");
+        background-image: url("../Img/fundo-de-efeito-de-zoom-gradiente_23-2149722799.jpg");
         background-size: cover;
         background-position: contain;
         background-repeat: no-repeat;
@@ -25,9 +30,24 @@
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 1;
         grid-column: 2;
+        
     }
 
+    
+    #title {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        font-size: 40px;
+        color: #000000;
+        font-family: 'Pokémon';
+        justify-self: center;
+        align-self: center;
+    }
+    
+
     #showMessage {
+        grid-column: 2; ;
         height: 25px;
         width: 100px;
         justify-self: center;
