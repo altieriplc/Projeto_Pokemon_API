@@ -53,6 +53,7 @@
 
 .menu.show {
     animation: slide-down 0.3s ease-in-out forwards;
+    color: white;
     
 }
 
@@ -64,4 +65,20 @@
     to {
         transform: scaleY(1);
     }
+}
+
+@font-face {
+    font-family: 'Pokémon';
+    src: url('../Fonts/Pokemon Solid.ttf') format('truetype');
+}
+
+.moreAboutPoke{
+    border: none;
+    text-decoration: none;
+    color: white !important;
+    font-family: 'Pokémon';
+}
+
+.moreAboutPoke:hover{
+    color: #FEBF00 !important;
 }

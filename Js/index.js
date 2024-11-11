@@ -42,23 +42,36 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                         img.src = imageUrl//coloca o resultado da requisição como src na div imagem
                         divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
                     })
-                select.value = input;
+                        /* ---------------------------- RETORNO HABITAT--------------------------------- */
 
-
-
-
+                        select.value = input;
             } else {
                 divName.innerText = "Invalid Number";
             }
-            console.log(data)
 
+            fetch(`https://pokeapi.co/api/v2/pokemon/${input}/encounters`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (encounterData) {
+                    if (encounterData.length > 0) {
+                        const habitat = encounterData[0].location_area.name;
+                        resultHabitat.innerText = habitat.charAt(0).toUpperCase() + habitat.slice(1);
+                    } else {
+                        resultHabitat.innerText = "Habitat não disponível";
+                    }	
+                    })
+                .catch(function (error) {
+                        console.log("Erro ao buscar dados de habitat: " + error);
+                    });
+                })
+                    
+                select.value = input;
         });
 
 
-    })
-    .catch(function (error) {
-        console.log("Houve um erro: " + error);
-    });
+    
+
 
 /* ------------------------------ Select ------------------------------ */
 
@@ -104,18 +117,32 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
                     divImagem.appendChild(img);//Esta linha pega o elemento de imagem recém-criado (img) e o anexa como um elemento filho ao elemento <div> com o ID "imagem". Isso essencialmente insere a imagem dentro da <div> em sua página da web.
                     resultType.innerText = pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)
 
-                    // #resultHabitat.innerText = pokemonData.location[0].location.name.charAt(0).toUpperCase() + pokemonData.location[0].location.name.slice(1)
-
-                    //API EM LOCATION REGIONS
+                
 
                     inputNumber.value = pokemonId
-
-
-
                 })
+
                 .catch(function (error) {
                     console.error("Erro:", error);
+
+                
                 })
+                fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/encounters`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (encounterData) {
+                    if (encounterData.length > 0) {
+                        const habitat = encounterData[0].location_area.name;
+                        resultHabitat.innerText = habitat.charAt(0).toUpperCase() + habitat.slice(1);
+                    } else {
+                        resultHabitat.innerText = "Habitat não disponível";
+                    }	
+                    })
+                .catch(function (error) {
+                        console.log("Erro ao buscar dados de habitat: " + error);
+                    });
+                
 
         })
     })
