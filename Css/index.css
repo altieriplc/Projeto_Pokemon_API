@@ -16,7 +16,7 @@
     body {
         /*Display stuff*/
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
         align-items: center;
         justify-content: center;
@@ -43,7 +43,7 @@
 
     
     #title {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 1;
         justify-self: center;
         font-size: 50px;
@@ -66,7 +66,7 @@
 
     #showMessage {
         font-family: 'Cream';
-        grid-column: 3;
+        grid-column: 2;
         grid-row: 1;
         height: 25px;
         width: 150px;
@@ -109,11 +109,12 @@
 
     #centralSection {
         /*Display stuff*/
+        /* margin-left: 50px; */
         border-radius: 5px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 2;
         align-self: center;
         justify-self: center;
@@ -291,8 +292,8 @@
         border-radius: 5px;
         display: grid;
         grid-template-columns: 40% 70% 10%;
-        grid-template-rows: repeat(6, 1fr);
-        grid-column: 3;
+        grid-template-rows: repeat(5, 1fr);
+        grid-column: 2;
         grid-row: 2;
         align-self: center;
         justify-self: center;
