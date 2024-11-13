@@ -3,10 +3,11 @@
     @font-face {
         font-family: 'Pokémon-Hollow';
         src: url('../Fonts/Pokemon Hollow.ttf') format('truetype');
+    }
 
+    @font-face {
         font-family: 'Pokémon-Solid';
         src: url('../Fonts/Pokemon Solid.ttf') format('truetype');
-        
     }
 
 
@@ -64,6 +65,7 @@
     
 
     #showMessage {
+        font-family: 'Cream';
         grid-column: 3;
         grid-row: 1;
         height: 25px;

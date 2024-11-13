@@ -1,7 +1,13 @@
 @font-face {
-    font-family: 'Solid';
-    src: url('../Fonts/Pokemon\ Solid.ttf') format('truetype');
+    font-family: 'Pokémon-Hollow';
+    src: url('../Fonts/Pokemon Hollow.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Pokémon-Solid';
+    src: url('../Fonts/Pokemon Solid.ttf') format('truetype');
+}
+
 
 
 #lowSection {
@@ -18,6 +24,7 @@
 }
 
 .menu-button {
+    font-family: 'Cream';
     font-size: 18px;
     display: inline-block;
     outline: 0;
